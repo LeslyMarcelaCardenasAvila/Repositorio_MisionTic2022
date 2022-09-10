@@ -13,4 +13,3 @@ class historiaClinica (models.Model):
     Examen_Fisico=models.CharField('examen',max_length=200)
     Sugerencias=models.CharField('sug',max_length=200)
     Evolucion=models.CharField('evol',max_length=200)
-
