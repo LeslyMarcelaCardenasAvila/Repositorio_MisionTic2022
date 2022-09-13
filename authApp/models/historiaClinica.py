@@ -8,7 +8,7 @@ class historiaClinica (models.Model):
     Cedula_Paciente=models.ForeignKey(Pacientes,related_name='historiaClinica',on_delete=models.CASCADE)
     CedulaPS=models.ForeignKey(Personal_Salud,related_name='historiaClinica',on_delete=models.CASCADE)
     Cedula_Fliar=models.ForeignKey(Familiares,related_name='historiaClinica',on_delete=models.CASCADE)
-    ID_HistC =models.AutoField(primary_key=True,unique=True,max_length=10)
+    ID_HistC =models.AutoField(primary_key=True)
     Diagnostico=models.CharField('diagnos',max_length=200)
     Examen_Fisico=models.CharField('examen',max_length=200)
     Sugerencias=models.CharField('sug',max_length=200)
