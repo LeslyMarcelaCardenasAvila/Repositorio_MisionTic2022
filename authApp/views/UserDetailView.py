@@ -4,11 +4,11 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.backends import TokenBackend
 from rest_framework.permissions import IsAuthenticated
 from authApp.models.usuario import User
-from authApp.serializers.usuarioserializer import UserSerializer
+from authApp.serializers.usuarioserializer import Usuarioserializer
 
 class UserDetailView(generics.RetrieveAPIView):
     queryset = User.objects.all()
-    serializer_class = UserSerializer
+    serializer_class = Usuarioserializer
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, *args, **kwargs):
